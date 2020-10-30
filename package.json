@@ -1,0 +1,27 @@
+{
+  "name": "root",
+  "private": true,
+  "scripts": {
+    "android": "lerna --scope=SampleNativeApp run android --stream --",
+    "ios": "lerna --scope=SampleNativeApp run ios --stream --",
+    "web": "lerna --scope=sample-web-app run start --stream --",
+    "expo": "lerna --scope=SampleExpoApp run start --stream --"
+  },
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ],
+    "nohoist": [
+      "**/react-native",
+      "**/react-native/**",
+      "**/expo",
+      "**/expo/**"
+    ]
+  },
+  "devDependencies": {
+    "lerna": "^3.22.1"
+  },
+  "dependencies": {
+    "metro-config": "^0.63.0"
+  }
+}
