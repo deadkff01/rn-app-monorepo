@@ -14,6 +14,7 @@ import {
   View,
   Text,
   StatusBar,
+  TouchableOpacity,
 } from 'react-native';
 
 import {
@@ -25,6 +26,18 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 
 import {helloFunction} from 'common/src/main';
+import {CustomButtonStyles} from 'sample-native-web/src/components/CustomButton/style';
+// import {CustomView} from 'sample-native-web/src/components/CustomView';
+
+const btnStyle = StyleSheet.create(CustomButtonStyles);
+
+export const CustomButton = (props) => {
+  return (
+    <TouchableOpacity style={btnStyle.button} onPress={props.onPress}>
+      <Text style={btnStyle.textStyle}>Some Button 2</Text>
+    </TouchableOpacity>
+  );
+};
 
 const App = () => {
   return (
@@ -44,6 +57,7 @@ const App = () => {
             <View style={styles.sectionContainer}>
               <Text style={styles.sectionTitle}>
                 {helloFunction('scorpion')}
+                <CustomButton />
               </Text>
               <Text style={styles.sectionTitle}>Step One</Text>
               <Text style={styles.sectionDescription}>

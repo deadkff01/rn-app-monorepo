@@ -1,10 +1,9 @@
 {
-  "packages": [
-    "packages/*"
-  ],
+  "packages": ["packages/*"],
   "nohoist": [
     "**/react-native",
     "**/react-native/**",
+    "**/react/**",
     "**/expo",
     "**/expo/**"
   ],
