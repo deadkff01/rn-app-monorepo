@@ -5,7 +5,7 @@ import { CustomButtonStyles } from "./style";
 export const CustomButton = (props) => {
   return (
     <TouchableOpacity style={styles.button} onPress={props.onPress}>
-      <Text style={styles.textStyle}>Some Button</Text>
+      <Text style={styles.textStyle}>Some Button Test</Text>
     </TouchableOpacity>
   );
 };
